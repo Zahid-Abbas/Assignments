@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Order</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<h1>Edit Order</h1>
+
+<form th:action="@{/update-order}" th:object="${orderForm}" method="post">
+
+    <input type="hidden" th:field="*{id}" />
+
+    <label for="orderDate">Order Date:</label>
+    <input type="datetime-local" id="orderDate" th:field="*{orderDate}" required />
+    <br><br>
+
+    <label for="customer">Customer:</label>
+    <select id="customer" th:field="*{customerId}" required>
+        <option value="" disabled>-- Select Customer --</option>
+        <option th:each="customer : ${customerList}"
+                th:value="${customer.id}"
+                th:text="${customer.name}"
+                th:selected="${customer.id} == ${orderForm.customerId}">
+        </option>
+    </select>
+    <br><br>
+
+    <label for="products">Products:</label>
+    <select id="products" multiple th:field="*{productIds}" required>
+        <option th:each="product : ${productList}"
+                th:value="${product.id}"
+                th:text="${product.name}"
+                th:selected="${orderForm.productIds.contains(product.id)}">
+        </option>
+    </select>
+    <br><br>
+
+    <button type="submit">Update Order</button>
+    <a th:href="@{/orders}">Cancel</a>
+</form>
+
+</body>
+</html>
+
