@@ -1,0 +1,79 @@
+/* Form Container */
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+  font-size: 14px; /* Match Add Customer */
+  line-height: 1.5;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px; /* Consistent heading size */
+  font-weight: bold;
+}
+
+/* Labels */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+  font-size: 14px; /* Consistent with Add Customer */
+}
+
+/* Inputs */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+button#submit,
+input#reset {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px; /* Match Add Customer */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Update Button */
+button#submit {
+  background-color: #17a2b8; /* Teal for Update */
+  color: #fff;
+}
+
+button#submit:hover {
+  background-color: #138496;
+}
+
+/* Reset Button */
+input#reset {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+input#reset:hover {
+  background-color: #c82333;
+}

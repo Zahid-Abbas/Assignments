@@ -1,0 +1,18 @@
+<div class="form-container">
+<h2>Edit Customer</h2>
+  <form>
+      <label>Name</label>
+      <input type="text" name="name" id="name" placeholder="Enter your name"  [(ngModel)]="customer.name"> <br>
+      <label>Password</label>
+      <input type="password" name="password" id="password" [(ngModel)]="customer.password"> <br>
+      <label>Email</label>
+      <input type="email" name="email" id="email" [(ngModel)]="customer.email"><br>
+       <label>Age</label>
+      <input type="text" name="age" id="age" [(ngModel)]="customer.age"> <br>
+<br/> <br/>
+          <button type="submit" name="submit" id="submit" (click)="onSubmit()">Update </button> &nbsp; &nbsp;
+      <input type="submit" name="reset" id="reset" value="Reset">
+  
+     
+  </form>
+  </div>

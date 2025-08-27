@@ -1,0 +1,27 @@
+<div>
+    <h1>Add Customer</h1>
+  <form>
+      <label>Enter your name</label>
+      <input type="text" name="name" id="name" placeholder="Enter your name"  [(ngModel)]="customer.name"> <br>
+      <label>Enter your password</label>
+      <input type="password" name="password" id="password" [(ngModel)]="customer.password"> <br>
+      <label>Enter your email</label>
+      <input type="email" name="email" id="email" [(ngModel)]="customer.email"><br>
+       <label>Enter your age</label>
+      <input type="text" name="age" id="age" [(ngModel)]="customer.age"> <br>
+<br/> <br/>
+          <button type="submit" name="submit" id="submit" (click)="onSubmit()">Add </button> &nbsp; &nbsp;
+      <input type="submit" name="reset" id="reset" value="Reset">
+  
+     
+  </form>
+
+  <p>{{message}}</p>
+
+  <br/><br/>
+  <a href="/customer">Back to Customer Menu</a> 
+
+<!-- <br/><br/><br/> -->
+<a href="">Back To Main Menu</a> <br/>
+
+</div>

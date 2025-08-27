@@ -1,0 +1,111 @@
+/* General Container */
+div {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+div h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Labels */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* Form Inputs */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+button#submit,
+input#reset {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button#submit {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button#submit:hover {
+  background-color: #218838;
+}
+
+input#reset {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+input#reset:hover {
+  background-color: #c82333;
+}
+
+/* Message Styling */
+p {
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+/* Links */
+/* Common link styling */
+a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 16px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  color: white;
+}
+
+/* Back to Customer Menu */
+a[href="/customer"] {
+  background-color: #6c757d; /* Gray */
+}
+
+a[href="/customer"]:hover {
+  background-color: #5a6268;
+}
+
+/* Back to Main Menu */
+a[href=""] {
+  background-color: #17a2b8; /* Teal */
+}
+
+a[href=""]:hover {
+  background-color: #138496;
+}

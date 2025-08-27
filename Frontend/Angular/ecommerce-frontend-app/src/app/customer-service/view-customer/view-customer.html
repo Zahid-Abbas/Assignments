@@ -1,0 +1,40 @@
+<h2>All Customers</h2>
+
+<div *ngIf="errorMessage" style="color: red;">
+  {{ errorMessage }}
+</div>
+
+<div>
+  Total customers: {{ customers.length }}
+</div>
+
+<div *ngIf="!customers.length && !errorMessage">
+  Loading 
+  ...
+</div>
+
+<div *ngIf="customers.length > 0" class="customer-list">
+  <div class="customer-header">
+    <strong>ID</strong>
+    <strong>Name</strong>
+    <strong>Email</strong>
+    <strong>Password</strong>
+    <strong>Age</strong>
+    <strong>Actions</strong>
+  </div>
+
+  <div *ngFor="let customer of customers" class="customer-row">
+    <div>{{ customer.id }}</div>
+    <div>{{ customer.name }}</div>
+    <div>{{ customer.email }}</div>
+    <div>{{ customer.password }}</div>
+    <div>{{ customer.age }}</div>
+    <div> <button (click)="editCustomer(customer.id)">Edit </button></div>
+     <div> <button (click)="deleteCustomer(customer.id)">Delete </button></div>
+  </div>
+</div>
+
+<br />
+
+<a href="/add-customer">Add Customer</a> |
+<a href="/">Back To Main Menu</a>
